@@ -15,13 +15,15 @@ hamburger.addEventListener("click", ()=>{
 close.addEventListener('click', () => {
     menu.classList.add('hidden')
     close.classList.add('hidden')
+    close.classList.remove('flex')
     hamburger.classList.remove('hidden')
 })
 
 hLinks.forEach(link=>{
   link.addEventListener("click", ()=>{
     menu.classList.toggle("hidden")
-    hamburger.classList.toggle("bg-white")
+    close.classList.add('hidden')
+    hamburger.classList.remove('hidden')
   })
 })
 
